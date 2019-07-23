@@ -1,1 +1,43 @@
-This is test.
+# Floor rounds off the given value to the closest integer which is less than the given value.
+  x = 1.44
+  floor(x) -> 1
+  x = -1.44
+  floor(x) -> -2
+# Ceil rounds off the given value to the closest integer which is more than the given value.
+  x = 1.44
+  ceil(x) -> 2
+  x = -1.44
+  ceil(x) -> -1
+  
+# round(): Rounds given number to the closest integer.
+  x = 1.44
+  round(x) -> 1
+  x = -1.44
+  round(x) -> -1
+  x = 1.50
+  ceil(x) -> 2
+  x = -1.50
+  ceil(x) -> -2
+  
+# setprecision()
+  #include <iostream>
+  #include <iomanip> // for std::setprecision()
+  int main()
+  {
+      std::cout << std::setprecision(16); // show 16 digits of precision
+      std::cout << 3.33333333333333333333333333333333333333f <<'\n'; // f suffix means float
+      std::cout << 3.33333333333333333333333333333333333333 << '\n'; // no suffix means double
+      return 0;
+  }
+  
+  Outputs:
+  3.333333253860474
+  3.333333333333334
+
+- Setprecision when used along with ‘fixed’
+  provides precision to floating point numbers correct to decimal numbers
+  mentioned in the brackets of the setprecison.
+  
+  double pi = 3.14159, npi = -3.14159; 
+  cout << fixed << setprecision(5) << pi <<" "<<npi<<endl; 
+  3.14159 -3.14159
